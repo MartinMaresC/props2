@@ -1,4 +1,6 @@
 import imagen from './imagenpokemon.webp';
+import Pikachu from './Pikachu.jpeg';
+import PropTypes from 'prop-types';
 import './App.css';
 import React from 'react';
 
@@ -18,11 +20,25 @@ function Pokemon(props) {
 function App() {
   return (
     <div className="App">
-      <Pokemon pokemonImagen={imagen} name="Pikachu" color="red"/>
-      <Pokemon pokemonImagen={imagen} name="Pikachu" color="blue"/>
-      <Pokemon pokemonImagen={imagen} name="Pikachu" color="green"/>
+      <Pokemon pokemonImagen={Pikachu} name="Pikachu" color="Black"/>
+      <Pokemon />
+      <Pokemon />
     </div>
   );
 }
+
+Pokemon.propTypes={
+  name:PropTypes.string,
+}
+
+Pokemon.defaultProps={
+  pokemonImagen:imagen,
+  name:"Quien es ese pokemón",
+  color:"Red"
+}
+
+
+
+
 
 export default App;
